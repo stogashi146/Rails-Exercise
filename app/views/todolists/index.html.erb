@@ -3,5 +3,7 @@
 <% @lists.each do |list| %>
   <p>タイトル</p>
   <!--list.titleで投稿のタイトルが表示-->
-  <span><%=list.title %></span>
+  <span>
+    <%= link_to list.title, todolist_path(list.id) %>
+  </span>
 <%end%>
